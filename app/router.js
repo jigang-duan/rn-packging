@@ -10,5 +10,5 @@ module.exports = app => {
   router.resources('packs', '/api/parcels/:parcelid/packs', controller.packs);
   io.of('/packaging').route('packaging', io.controller.packaging.index);
 
-  router.get('/', controller.home.index);
+  router.get('*', controller.home.index);
 };
