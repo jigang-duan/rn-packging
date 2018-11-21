@@ -5,7 +5,7 @@ let socketio;
 
 // eslint-disable-next-line import/prefer-default-export
 export const socketConnect = action => {
-  socketio = socket('http://127.0.0.1:7001/packaging');
+  socketio = socket('http://192.168.11.1:7001/packaging');
 
   socketio.on('connect', () => {
     console.info('socket-io connect');
