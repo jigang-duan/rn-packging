@@ -75,8 +75,8 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-ant-design-pro --env prod",
-    "stop": "egg-scripts stop --title=egg-server-ant-design-pro",
+    "start": "egg-scripts start --daemon --title=rn-packaging-pro --env prod",
+    "stop": "egg-scripts stop --title=rn-packaging-pro",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
     "build": "APP_ROOT=$PWD/app/web umi build",
@@ -94,7 +94,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:eggjs/egg-ant-design-pro.git"
+    "url": "git@git.cs2025.com:jigang.duan/rn-packaging-pro.git"
   },
   "author": "popomore",
   "license": "MIT"

@@ -14,15 +14,15 @@ const FooterView = () => (
           blankTarget: true,
         },
         {
-          key: 'github',
-          title: <Icon type="github" />,
-          href: 'https://github.com/ant-design/ant-design-pro',
+          key: 'gitlab',
+          title: <Icon type="gitlab" />,
+          href: 'http://git.cs2025.com/jigang.duan/rn-packaging-pro',
           blankTarget: true,
         },
         {
-          key: 'Ant Design',
-          title: 'Ant Design',
-          href: 'https://ant.design',
+          key: '打个包',
+          title: '打个包',
+          href: '#',
           blankTarget: true,
         },
       ]}
