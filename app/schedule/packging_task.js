@@ -21,7 +21,7 @@ class PackgingTask extends Subscription {
 
   // subscribe 是真正定时任务执行时被运行的函数
   async subscribe() {
-    this.ctx.coreLogger.info('---------开始任务--------------');
+    this.ctx.coreLogger.info(`---------开始任务-${process.version}-------------`);
     const tmpPath = path.join(__dirname, '../../tmp');
     const pros = shell.ls(tmpPath).map(p => path.join(tmpPath, p));
     if (pros.length === 1) {
@@ -59,8 +59,9 @@ class PackgingTask extends Subscription {
       const need_android = configObj.os === 'Android' ? '-a' : '';
       const need_ios = configObj.os === 'IOS' ? '-i' : '';
       shell.pushd(current);
-      const cmdline = `bash -x ${buildscript} ${need_android} ${need_ios} ${version}`;
+      const cmdline = `bash -x ${buildscript} ${need_android} ${need_ios} ${version} -e ${configObj.environment}`;
       this.ctx.coreLogger.info(`执行脚本的当前目录${process.cwd()}`);
+      this.ctx.coreLogger.info(cmdline);
       const rv = shell.exec(cmdline);
       shell.popd();
       if (rv.code !== 0) {

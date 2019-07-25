@@ -42,7 +42,8 @@ export default class GlobalHeaderRight extends PureComponent {
         <Tooltip title="logs">
           <a
             target="_blank"
-            href="http://192.168.11.1:7001/__logs"
+            // href="http://192.168.11.1:7001/__logs"
+            href="http://192.168.11.1:62699"
             rel="noopener noreferrer"
             className={styles.action}
           >

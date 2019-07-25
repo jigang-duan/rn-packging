@@ -35,7 +35,8 @@ class ParcelsService extends Service {
   }
 
   fakeParcels() {
-    return require('../data/parcels.json');
+    const filePath = path.join(__dirname, '../data/parcels.json');
+    return fs.readJsonSync(filePath);
   }
 }
 
